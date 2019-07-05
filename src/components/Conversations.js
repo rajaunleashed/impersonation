@@ -27,9 +27,8 @@ class Conversations extends Component {
           username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />
@@ -39,7 +38,6 @@ class Conversations extends Component {
           bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
-          notification="1"
           hasStory
           isBlocked
           isMuted
@@ -49,9 +47,7 @@ class Conversations extends Component {
           username="sis"
           bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
           description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
+          time="1:00 PM"
           isBlocked
           isMuted
         />
@@ -62,9 +58,7 @@ class Conversations extends Component {
           description="Hello, how are you??"
           time="12:00 PM"
           notification="1"
-          hasStory
           isBlocked
-          isMuted
         />
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
@@ -72,7 +66,6 @@ class Conversations extends Component {
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
-          notification="1"
           hasStory
           isBlocked
           isMuted

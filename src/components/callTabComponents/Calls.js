@@ -25,7 +25,7 @@ class Calls extends Component {
      1 = you called and he answered
      2 = they called but you didnt answer
      3 = they called and you answered */
-          callStatus={0}
+          callStatus={1}
           time="12:00 PM Today"
         />
         <CallItem
@@ -36,7 +36,7 @@ class Calls extends Component {
      1 = you called and he answered
      2 = they called but you didnt answer
      3 = they called and you answered */
-          callStatus={0}
+          callStatus={2}
           time="12:00 PM Today"
         />
         <CallItem
@@ -47,7 +47,7 @@ class Calls extends Component {
      1 = you called and he answered
      2 = they called but you didnt answer
      3 = they called and you answered */
-          callStatus={0}
+          callStatus={1}
           time="12:00 PM Today"
         />
         <CallItem
