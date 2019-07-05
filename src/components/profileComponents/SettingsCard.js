@@ -2,10 +2,11 @@ import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { theme } from '../../theme';
 
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabItemBackground,
     borderBottomWidth: 0.5,
     borderBottomColor: 'lightgray'
   },
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
   },
   textStyle: {
     fontSize: 18,
-    color: 'black',
+    color: theme.colors.title,
     paddingHorizontal: 20
   }
 });
@@ -29,7 +30,7 @@ const SettingsCard = props => {
   return (
     <TouchableOpacity onPress={() => props.onPress()} style={mainContainer}>
       <View style={innerContainer}>
-        <Icon name={icon} size={20} color={props.color || '#0084ff'} />
+        <Icon name={icon} size={20} color={props.color || theme.colors.primary} />
         <Text style={textStyle}>{title}</Text>
       </View>
     </TouchableOpacity>

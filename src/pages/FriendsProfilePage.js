@@ -3,6 +3,7 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import ProfileHeader from '../components/profileComponents/ProfileHeader';
 import ProfileInfo from '../components/profileComponents/ProfileInfo';
 import SettingsCard from '../components/profileComponents/SettingsCard';
+import { theme } from '../theme';
 
 const styles = StyleSheet.create({
   mainContainer: {
@@ -40,7 +41,7 @@ class FriendsProfilePage extends Component {
           onPress={() => this.setState({ isBlocked: false })}
           title="Unblock"
           icon="circle"
-          color={'red'}
+          color={theme.colors.danger}
         />
       );
     }
@@ -64,7 +65,7 @@ class FriendsProfilePage extends Component {
           onPress={() => this.setState({ isMuted: false })}
           title="Unmute"
           icon="volume-up"
-          color={'red'}
+          color={theme.colors.danger}
         />
       );
     }

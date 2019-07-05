@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import ProfilePicture from '../components/onCallComponents/ProfilePicture';
 import OptionsButtons from '../components/onCallComponents/OptionButtons';
+import { theme } from '../theme';
 
 const styles = StyleSheet.create({
   ProfileContainer: {
@@ -16,7 +17,10 @@ const styles = StyleSheet.create({
   },
   usernameTextStyle: {
     fontSize: 18,
-    color: '#0084ff'
+    color: theme.colors.primary
+  },
+  timeTextStyle: {
+    color: theme.colors.searchBackground
   },
   optionsContainerStyle: {
     flexDirection: 'row',
@@ -55,7 +59,7 @@ class OnCallPage extends Component {
           onPress={() => this.setState({ isMuted: false })}
           name="microphone-slash"
           size={60}
-          color="rgba(240, 149, 17, 1)"
+          color={theme.colors.secondary}
         />
       );
     }
@@ -68,7 +72,7 @@ class OnCallPage extends Component {
         onPress={() => this.setState({ isMuted: true })}
         name="microphone-slash"
         size={60}
-        color="rgba(240, 149, 17, 0.3)"
+        color={theme.colors.halfOpacitySecondary}
       />
     );
   }
@@ -85,7 +89,7 @@ class OnCallPage extends Component {
           onPress={() => this.setState({ speakerOn: false })}
           name="volume-up"
           size={60}
-          color="rgba(0, 132, 255, 1)"
+          color={theme.colors.primary}
         />
       );
     }
@@ -98,7 +102,7 @@ class OnCallPage extends Component {
         onPress={() => this.setState({ speakerOn: true })}
         name="volume-up"
         size={60}
-        color="rgba(0, 132, 255, 0.3)"
+        color={theme.colors.halfOpacityPrimary}
       />
     );
   }
@@ -109,7 +113,8 @@ class OnCallPage extends Component {
       usernameAndTime,
       usernameTextStyle,
       optionsContainerStyle,
-      endCallContainer
+      endCallContainer,
+      timeTextStyle
     } = styles;
     const { navigation } = this.props;
     const username = navigation.getParam('username', 'no name available');
@@ -119,7 +124,7 @@ class OnCallPage extends Component {
         <View style={ProfileContainer}>
           <View style={usernameAndTime}>
             <Text style={usernameTextStyle}>{username}</Text>
-            <Text> 00:15</Text>
+            <Text style={timeTextStyle}> 00:15</Text>
           </View>
           <ProfilePicture imageSrc={imageSrc} />
         </View>
@@ -134,7 +139,7 @@ class OnCallPage extends Component {
             onPress={() => this.props.navigation.goBack()}
             name="phone"
             size={60}
-            color="#FE3939"
+            color={theme.colors.danger}
           />
         </View>
       </View>

@@ -3,6 +3,7 @@ import { View, StatusBar } from 'react-native';
 import ChatHeader from '../components/chatComponents/ChatHeader';
 import ChatInput from '../components/chatComponents/ChatInput';
 import MessagesView from '../components/chatComponents/MessagesView';
+import { theme } from '../theme';
 
 class ChatPage extends Component {
   // THIS OPTION IS TO SHOW/HIDE DEFAULT NAVIGATION HEADER
@@ -20,7 +21,7 @@ class ChatPage extends Component {
     return (
       <View style={{ flex: 1 }}>
         {/* The Color of Status Bar (battery level, notifcitaion bar, and wifi stats) */}
-        <StatusBar barStyle="dark-content" backgroundColor="white" />
+        <StatusBar barStyle="dark-content" backgroundColor={theme.colors.tabPageBackground} />
         {/* CHAT_HEADER Component (PICTURE, ONLINE_STATUS, CALL, ATTACHMENTS, OPTIONS BUTTON) */}
         <ChatHeader
           onOpenProfile={() =>

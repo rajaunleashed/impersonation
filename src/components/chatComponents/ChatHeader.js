@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { withNavigation } from 'react-navigation';
+import { theme } from '../../theme';
 /* Styles for the components */
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabPageBackground,
     paddingVertical: 5
   },
   backButtonStyle: {
@@ -34,12 +35,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10
   },
   usernameStyle: {
-    color: 'black',
+    color: theme.colors.title,
     fontSize: 18,
     fontWeight: 'bold'
   },
   descriptionStyle: {
-    color: 'darkgray',
+    color: theme.colors.description,
     fontSize: 16
   },
   optionsStyle: {
@@ -69,7 +70,7 @@ class ChatHeader extends Component {
       <View style={container}>
         {/* BACK BUTTON to go back to the page where it came from  */}
         <TouchableOpacity onPress={() => this.props.onPress()} style={backButtonStyle}>
-          <Icon name="angle-left" size={30} color="black" />
+          <Icon name="angle-left" size={30} color={theme.colors.secondary} />
         </TouchableOpacity>
         {/* ProfileAndOptions Container: contains The Profile Image and 
         the username and Seen status */}
@@ -95,16 +96,16 @@ class ChatHeader extends Component {
                 }}
                 name="phone"
                 size={30}
-                color="#f09511"
+                color={theme.colors.secondary}
               />
             </TouchableOpacity>
             {/* Attachments Button Container: contains The Attachments Icon */}
             <TouchableOpacity style={{ paddingHorizontal: 5 }}>
-              <Icon name="paperclip" size={30} color="#f09511" />
+              <Icon name="paperclip" size={30} color={theme.colors.secondary} />
             </TouchableOpacity>
             {/* Options Button Container: contains The Options Icon */}
             <TouchableOpacity style={{ paddingHorizontal: 10 }}>
-              <Icon name="ellipsis-v" size={30} color="#0084ff" />
+              <Icon name="ellipsis-v" size={30} color={theme.colors.primary} />
             </TouchableOpacity>
           </View>
         </View>

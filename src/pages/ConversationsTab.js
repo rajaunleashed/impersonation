@@ -3,6 +3,7 @@ import { View, TouchableOpacity, StatusBar, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Conversations from '../components/Conversations';
 import SearchInput from '../components/common/SearchInput';
+import { theme } from '../theme';
 
 /* STYLESHEET */
 const styles = StyleSheet.create({
@@ -15,16 +16,22 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 10,
     right: 10,
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabBackground,
     borderRadius: 100,
     elevation: 5,
-    shadowColor: '#000',
-    shadowOpacity: 0.3,
-    shadowRadius: 5
+    shadowColor: theme.colors.secondary,
+    shadowOpacity: 0.4,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 2 }
   }
 });
 
 class ConversationsTab extends Component {
+  // THIS OPTION IS TO SHOW/HIDE DEFAULT NAVIGATION HEADER
+  static navigationOptions = {
+    header: null
+  };
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -32,20 +39,17 @@ class ConversationsTab extends Component {
 
   render() {
     return (
-      <View style={{ backgroundColor: 'white', flex: 1 }}>
+      <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
         {/* The Color of Status Bar (battery level, notifcitaion bar, and wifi stats) */}
-        <StatusBar backgroundColor="white" barStyle="dark-content" />
-
-        <Conversations
-          goToProfilePage={() => this.props.goToProfilePage()}
-          goToMessagePage={() => this.props.goToMessagePage()}
-        >
+        <StatusBar backgroundColor={theme.colors.tabPageBackground} barStyle="dark-content" />
+        {/* CONVERSATIONS Component */}
+        <Conversations>
           {/* SEARCH_INPUT Component */}
           <SearchInput />
         </Conversations>
         {/* FLOATING ACTION BUTTON */}
         <TouchableOpacity style={styles.fabStyle}>
-          <Icon name="plus" size={25} color="#f09511" />
+          <Icon name="plus" size={25} color={theme.colors.secondary} />
         </TouchableOpacity>
       </View>
     );

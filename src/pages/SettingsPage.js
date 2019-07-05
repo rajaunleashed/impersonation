@@ -4,10 +4,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import ProfileHeader from '../components/profileComponents/ProfileHeader';
 import SettingsCard from '../components/profileComponents/SettingsCard';
 import { ScrollView } from 'react-native-gesture-handler';
+import { theme } from '../theme';
 /* STYLES: you can change Colors, Sizes, Shapes, ETC */
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabBackground,
     width: '100%',
     flexDirection: 'column',
     flex: 1
@@ -16,7 +17,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   titleStyle: {
-    color: 'black',
+    color: theme.colors.title,
     fontSize: 18,
     fontWeight: 'bold'
   },
@@ -43,7 +44,7 @@ class SettingsPage extends Component {
     return (
       <View style={mainContainer}>
         <ProfileHeader title={title} onPress={() => this.props.navigation.goBack()} />
-        <ScrollView >
+        <ScrollView>
           <SettingsCard onPress={() => null} title="do Something" icon="bell" />
           <SettingsCard onPress={() => null} title="do Something" icon="phone" />
           <SettingsCard onPress={() => null} title="do Something" icon="circle" />

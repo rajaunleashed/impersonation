@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, TextInput, StyleSheet, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { theme } from '../../theme';
 
 /* STYLESHEETS */
 const styles = StyleSheet.create({
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
   },
   inputAndMicrophoneStyle: {
     flexDirection: 'row',
-    backgroundColor: '#f0f0f0',
+    backgroundColor: theme.colors.inputBackground,
     flex: 3,
     marginHorizontal: 10,
     paddingVertical: Platform.OS === 'ios' ? 10 : 0,
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     backgroundColor: 'transparent',
     paddingLeft: 20,
-    color: 'black',
+    color: theme.colors.inputText,
     flex: 3,
     fontSize: 15,
     maxHeight: 100,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     borderLeftColor: 'white'
   },
   sendButtonStyle: {
-    backgroundColor: '#f09511',
+    backgroundColor: theme.colors.sendBackground,
     borderRadius: 50,
     height: 50,
     width: 50,
@@ -74,12 +75,12 @@ class ChatInput extends Component {
           <View style={inputAndMicrophoneStyle}>
             <TextInput multiline placeholder="type something..." style={inputStyle} />
             <TouchableOpacity style={microphoneButtonStyle}>
-              <Icon name="microphone" size={25} color="#f09511" />
+              <Icon name="microphone" size={25} color={theme.colors.secondary} />
             </TouchableOpacity>
           </View>
           {/* Send Button: Contains Send Icon */}
           <TouchableOpacity style={sendButtonStyle}>
-            <Icon name="send" size={25} color="white" />
+            <Icon name="send" size={25} color={theme.colors.sendIcon} />
           </TouchableOpacity>
         </View>
       </View>

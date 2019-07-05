@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { theme } from '../../theme';
 
 /* STYLES: you can change Colors, Sizes, Shapes, ETC */
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabPageBackground,
     flexDirection: 'column',
     paddingBottom: 10
   },
@@ -26,20 +27,20 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   usernameStyle: {
-    color: 'black',
+    color: theme.colors.title,
     fontSize: 18,
     fontWeight: 'bold'
   },
   bioContainer: {
     marginHorizontal: 50,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: theme.colors.inputBackground,
     alignItems: 'center',
     flexDirection: 'column',
     paddingHorizontal: 10,
     paddingVertical: 5
   },
   bioStyle: {
-    color: 'darkgray',
+    color: theme.colors.description,
     alignSelf: 'center'
   },
   editIconStyle: {
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   },
   friendsBioContainer: {
     marginHorizontal: 50,
-    backgroundColor: '#f0f0f0',
+    backgroundColor: theme.colors.inputBackground,
     alignContent: 'center',
     padding: 5
   }
@@ -87,7 +88,7 @@ otherwise it wont let you edit */
             <Text numberOfLines={3} style={bioStyle}>
               {this.props.bio}
             </Text>
-            <Icon style={editIconStyle} name="pencil" size={25} color="#f09511" />
+            <Icon style={editIconStyle} name="pencil" size={25} color={theme.colors.secondary} />
           </TouchableOpacity>
         </View>
       );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView } from 'react-native';
 import ChatCard from '../chatComponents/ChatCard';
+import { theme } from '../../theme';
 
 class MessagesView extends Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class MessagesView extends Component {
     return (
       /* SCROLLABLE VIEW Container: Contains ALl the ConversationItems(Users you talk to) */
       <ScrollView
-        style={{ backgroundColor: 'white' }}
+        style={{ backgroundColor: theme.colors.tabPageBackground }}
         ref={ref => (this.scrollView = ref)}
         onContentSizeChange={() => {
           this.scrollView.scrollToEnd({ animated: true });

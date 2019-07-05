@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { withNavigation } from 'react-navigation';
+import { theme } from '../../theme';
 /* Stylesheets: You can style Everything Here */
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabBackground,
     paddingBottom: 10
   },
   headerContainer: {
@@ -19,20 +20,19 @@ const styles = StyleSheet.create({
   headerTitleStyle: {
     fontSize: 20,
     fontWeight: '700',
-    color: 'black',
+    color: theme.colors.activeTabTitle,
     alignSelf: 'center'
   },
   imageStyle: {
     height: 40,
-    width: 40,
+    width: 40
   },
   imageContainer: {
     borderRadius: 20,
     height: 40,
     width: 40,
     overflow: 'hidden'
-
-  },
+  }
 });
 
 class Header extends Component {
@@ -48,7 +48,7 @@ class Header extends Component {
           <Text style={headerTitleStyle}>{this.props.title}</Text>
           {/* Your Profile Button: tap it and you will see settings related to your profile  */}
           <TouchableOpacity
-          style={[imageContainer]}
+            style={[imageContainer]}
             onPress={() => {
               this.props.navigation.navigate('ProfilePage');
             }}

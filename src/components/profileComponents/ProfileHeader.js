@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { theme } from '../../theme';
 
 /* STYLES: you can change Colors, Sizes, Shapes, ETC */
 const styles = StyleSheet.create({
   mainContainer: {
-    backgroundColor: 'white',
+    backgroundColor: theme.colors.tabPageBackground,
     width: '100%',
     flexDirection: 'column'
   },
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   titleStyle: {
-    color: 'black',
+    color: theme.colors.title,
     fontSize: 18,
     fontWeight: 'bold'
   },
@@ -43,7 +44,7 @@ class ProfileHeader extends Component {
         </View>
         {/* back Button: tap it and you will be taken back to the parent component/page */}
         <TouchableOpacity onPress={this.props.onPress} style={buttonContainer}>
-          <Icon name="angle-left" size={30} color="#f09511" />
+          <Icon name="angle-left" size={30} color={theme.colors.secondary} />
         </TouchableOpacity>
       </View>
     );

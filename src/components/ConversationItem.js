@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Modal, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { withNavigation } from 'react-navigation';
 import MiniProfile from './common/MiniProfile';
+import { theme } from '../theme';
 
 const styles = StyleSheet.create({
   /* The Whole Components Style */
   containerStyle: {
+    backgroundColor: theme.colors.tabItemBackground,
     paddingBottom: 25,
     paddingRight: 20,
     paddingLeft: 10
@@ -21,17 +23,16 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     overflow: 'hidden'
-
   },
   /* The profile Picture Style */
   imageStyle: {
     height: 55,
-    width: 55,
+    width: 55
   },
   /* The username Text Style */
   usernameTextStyle: {
     fontSize: 16,
-    color: 'black',
+    color: theme.colors.title,
     fontWeight: '500',
     width: 210
   },
@@ -39,17 +40,17 @@ const styles = StyleSheet.create({
   descriptionTextStyle: {
     fontSize: 13,
     width: 240,
-    color: '#9f9f9f'
+    color: theme.colors.description
   },
   /* The time that the message has been sent ---  Style */
   timeTextStyles: {
     fontSize: 11,
-    color: 'black',
+    color: theme.colors.subtitle,
     fontWeight: '300'
   },
   /* the notification Number__Container Style */
   notificationCircleStyle: {
-    backgroundColor: '#c3c6cb',
+    backgroundColor: theme.colors.badgeBackground,
     borderRadius: 50,
     height: 20,
     width: 20,
@@ -59,53 +60,9 @@ const styles = StyleSheet.create({
   },
   /* THe notication number__Text Style */
   notificationTextStyle: {
-    color: 'white',
+    color: theme.colors.badgeText,
     fontWeight: 'bold',
     fontSize: 10
-  },
-  /* ============= MODAL STYLES ============= */
-  modalMainContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%',
-    backgroundColor: 'rgba(0,0,0,0)',
-    shadowColor: '#000',
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-  },
-  modalInnerContainer: {
-    backgroundColor: 'white',
-    borderRadius: 20,
-    elevation: 3,
-    overflow: 'hidden',
-
-  },
-  modalUsernameStyle: {
-    position: 'absolute',
-    color: 'white',
-    backgroundColor: 'rgba(0,0,0,0.3)',
-    width: '100%',
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25
-  },
-  modalImageStyle: {
-    width: 200,
-    height: 200,
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25
-  },
-  modalOptionsContainer: {
-    backgroundColor: 'white',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    borderBottomLeftRadius: 25,
-    borderBottomRightRadius: 25
-  },
-  modalIconContainer: {
-    paddingVertical: 5,
-    paddingHorizontal: 10
   }
 });
 
@@ -123,7 +80,7 @@ class ConversationItem extends Component {
 
   disableModal = () => {
     this.setModalVisible(!this.state.modalVisible);
-  }
+  };
 
   /* Function: check if theres notification:
   types: Number Circle  and image Circle  */
@@ -139,14 +96,14 @@ class ConversationItem extends Component {
       /* The Image Circle Notification Style */
     } else if (this.props.notification && type === 'imageCircle') {
       return {
-        borderColor: '#0084ff'
+        borderColor: theme.colors.primary
       };
     }
   }
   showStoryCircle() {
     if (this.props.hasStory) {
       return {
-        borderColor: '#0084ff',
+        borderColor: theme.colors.primary,
         borderWidth: 2
       };
     }
@@ -159,7 +116,7 @@ class ConversationItem extends Component {
       imageContainer,
       descriptionTextStyle,
       usernameTextStyle,
-      timeTextStyles,
+      timeTextStyles
     } = styles;
     return (
       /* The whole Container */
@@ -179,16 +136,13 @@ class ConversationItem extends Component {
         >
           {/* The Profile Pic Button */}
           <TouchableOpacity
-          style={[imageContainer, this.showStoryCircle()]}
+            style={[imageContainer, this.showStoryCircle()]}
             onPress={() => {
               this.setModalVisible(!this.state.modalVisible);
             }}
           >
             {/* Image */}
-            <Image
-              style={[imageStyle]}
-              source={{ uri: this.props.imageSrc }}
-            />
+            <Image style={[imageStyle]} source={{ uri: this.props.imageSrc }} />
           </TouchableOpacity>
           {/* Username, message, Time, and notification number Container */}
           <View
@@ -229,12 +183,12 @@ class ConversationItem extends Component {
          it shows you the user enlarged profile pic and some options(call, text, info) */}
         <Modal animationType="slide" transparent visible={this.state.modalVisible}>
           <MiniProfile
-          username={this.props.username}
-          imageSrc={this.props.imageSrc}
-          bio={this.props.bio}
-          isBlocked={this.props.isBlocked}
-          isMuted={this.props.isMuted}
-          hide={this.disableModal} 
+            username={this.props.username}
+            imageSrc={this.props.imageSrc}
+            bio={this.props.bio}
+            isBlocked={this.props.isBlocked}
+            isMuted={this.props.isMuted}
+            hide={this.disableModal}
           />
         </Modal>
       </View>

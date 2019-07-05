@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
 import {
   createStackNavigator,
   createAppContainer,
   createMaterialTopTabNavigator,
   SafeAreaView
 } from 'react-navigation';
-import MainPage from './MainPage';
 import ChatPage from './ChatPage';
 import ProfilePage from './ProfilePage';
 import FriendsProfilePage from './FriendsProfilePage';
@@ -15,32 +13,33 @@ import StoriesTab from './StoriesTab';
 import Header from '../components/common/Header';
 import SettingsPage from './SettingsPage';
 import OnCallPage from './OnCallPage';
+import { theme } from '../theme';
+import ConversationsTab from './ConversationsTab';
 // NAVIGATOR FUNCTION
 const ChatPageNavigator = createStackNavigator(
   {
     Home: createMaterialTopTabNavigator(
       {
         Calls: CallsTab,
-        Chats: MainPage,
+        Chats: ConversationsTab,
         Stories: StoriesTab
       },
       {
         initialRouteName: 'Chats',
         tabBarOptions: {
-          activeTintColor: 'black',
-          inactiveTintColor: 'gray',
+          activeTintColor: theme.colors.activeTabTitle,
+          inactiveTintColor: theme.colors.inactiveTabTitle,
           tabStyle: {
-            backgroundColor: 'transparent',
+            backgroundColor: 'transparent'
           },
           labelStyle: {
             fontWeight: 'bold'
           },
           indicatorStyle: {
-            backgroundColor: '#0084ff'
+            backgroundColor: theme.colors.tabIndicator
           },
           style: {
-            backgroundColor: 'white',
-
+            backgroundColor: theme.colors.tabBackground
           }
         },
         navigationOptions: {
