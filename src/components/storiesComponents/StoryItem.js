@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { withNavigation } from 'react-navigation';
-import MiniProfile from '../common/MiniProfile';
 import { theme } from '../../theme';
 
 const styles = StyleSheet.create({
@@ -36,33 +35,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     width: 210
   },
-  /* The messages Style */
-  descriptionTextStyle: {
-    fontSize: 13,
-    width: 240,
-    color: theme.colors.description
-  },
   /* The time that the message has been sent ---  Style */
   timeTextStyles: {
     fontSize: 11,
     color: theme.colors.subtitle,
     fontWeight: '300'
-  },
-  /* the notification Number__Container Style */
-  notificationCircleStyle: {
-    backgroundColor: theme.colors.badgeBackground,
-    borderRadius: 50,
-    height: 20,
-    width: 20,
-    marginRight: 5,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  /* THe notication number__Text Style */
-  notificationTextStyle: {
-    color: theme.colors.badgeText,
-    fontWeight: 'bold',
-    fontSize: 10
   }
 });
 
@@ -74,7 +51,6 @@ class StoryItem extends Component {
     };
   }
 
-
   showStoryCircle() {
     if (this.props.isNew) {
       return {
@@ -84,30 +60,17 @@ class StoryItem extends Component {
     }
   }
   render() {
-    const {
-      containerStyle,
-      buttonStyle,
-      imageStyle,
-      imageContainer,
-      descriptionTextStyle,
-      usernameTextStyle,
-      timeTextStyles
-    } = styles;
     return (
       /* The whole Container */
-      <View style={containerStyle}>
+      <View style={styles.containerStyle}>
         {/* The Button  */}
-        <TouchableOpacity
-          style={buttonStyle}
-        >
-          {/* The Profile Pic Button */}
-          <View
-            style={[imageContainer, this.showStoryCircle()]}
-          >
+        <TouchableOpacity style={styles.buttonStyle}>
+          {/* The Profile Pic View */}
+          <View style={[styles.imageContainer, this.showStoryCircle()]}>
             {/* Image */}
-            <Image style={[imageStyle]} source={{ uri: this.props.imageSrc }} />
+            <Image style={[styles.imageStyle]} source={{ uri: this.props.imageSrc }} />
           </View>
-          {/* Username, message, Time, and notification number Container */}
+          {/* Username and Time View */}
           <View
             style={{
               flex: 1,
@@ -121,10 +84,10 @@ class StoryItem extends Component {
                 justifyContent: 'space-between'
               }}
             >
-              <Text numberOfLines={1} style={usernameTextStyle}>
+              <Text numberOfLines={1} style={styles.usernameTextStyle}>
                 {this.props.username}
               </Text>
-              <Text style={timeTextStyles}>{this.props.time}</Text>
+              <Text style={styles.timeTextStyles}>{this.props.time}</Text>
             </View>
           </View>
         </TouchableOpacity>
