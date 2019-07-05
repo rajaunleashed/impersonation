@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
-import ConversationItem from './ConversationItem';
+import React, { Component } from "react";
+import { ScrollView } from "react-native";
+import ConversationItem from "./ConversationItem";
 
 class Conversations extends Component {
   render() {
@@ -23,9 +23,9 @@ class Conversations extends Component {
         isMuted: wether the target is muted or not
         */}
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bro"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
+          imageSrc="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          username="Bruce Mars"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
           time="5:00 PM"
           notification="3"
@@ -33,117 +33,52 @@ class Conversations extends Component {
           isMuted
         />
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          imageSrc="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="jack jones"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
-          time="12:00 PM"
-          hasStory
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="sis"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          imageSrc="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="eliza"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
-          time="1:00 PM"
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="someone"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          imageSrc="https://images.pexels.com/photos/1845534/pexels-photo-1845534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="Victoria Martinez"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          isBlocked
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bro"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          hasStory
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          imageSrc="https://images.pexels.com/photos/1855582/pexels-photo-1855582.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="Diana Bruce"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />
         <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="sis"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          imageSrc="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="Zack Allen"
+          bio="my name is someone, i work"
           description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="someone"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bro"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="sis"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="someone"
-          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
+          time="5:00 PM"
+          notification="3"
           isBlocked
           isMuted
         />

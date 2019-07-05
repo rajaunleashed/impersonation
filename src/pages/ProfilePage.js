@@ -35,7 +35,7 @@ class ProfilePage extends Component {
           i like to read books and stuff,
           Eminem is my idol i like to read books and stuff,
           Eminem is my idol"
-            profilePicture="http://bayarbotany.com/Avatar.JPG"
+            profilePicture="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           />
           <SettingsCard
             onPress={() =>

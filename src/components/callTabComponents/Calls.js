@@ -7,8 +7,8 @@ class Calls extends Component {
     return (
       <ScrollView>
         <CallItem
-          imageSrc="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80"
-          username="Bayar Botany"
+          imageSrc="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+          username="Bruce Mars"
           /* callStatus --------
      0 = you called but he didnt answer
      1 = you called and he answered
@@ -18,7 +18,7 @@ class Calls extends Component {
           time="12:00 PM Today"
         />
         <CallItem
-          imageSrc="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80"
+          imageSrc="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           username="Bayar Botany"
           /* callStatus --------
      0 = you called but he didnt answer
@@ -29,8 +29,8 @@ class Calls extends Component {
           time="12:00 PM Today"
         />
         <CallItem
-          imageSrc="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80"
-          username="Bayar Botany"
+          imageSrc="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="marie watson"
           /* callStatus --------
      0 = you called but he didnt answer
      1 = you called and he answered
@@ -40,25 +40,14 @@ class Calls extends Component {
           time="12:00 PM Today"
         />
         <CallItem
-          imageSrc="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80"
-          username="Bayar Botany"
+          imageSrc="https://images.pexels.com/photos/1845534/pexels-photo-1845534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          username="Victoria Martinez"
           /* callStatus --------
      0 = you called but he didnt answer
      1 = you called and he answered
      2 = they called but you didnt answer
      3 = they called and you answered */
           callStatus={1}
-          time="12:00 PM Today"
-        />
-        <CallItem
-          imageSrc="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1915&q=80"
-          username="Bayar Botany"
-          /* callStatus --------
-     0 = you called but he didnt answer
-     1 = you called and he answered
-     2 = they called but you didnt answer
-     3 = they called and you answered */
-          callStatus={0}
           time="12:00 PM Today"
         />
       </ScrollView>

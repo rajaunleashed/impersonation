@@ -53,7 +53,7 @@ class Header extends Component {
               this.props.navigation.navigate('ProfilePage');
             }}
           >
-            <Image style={imageStyle} source={{ uri: 'http://bayarbotany.com/Avatar.JPG' }} />
+            <Image style={imageStyle} source={{ uri: 'https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' }} />
           </TouchableOpacity>
         </View>
       </View>

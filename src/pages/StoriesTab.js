@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
+import Stories from '../components/storiesComponents/Stories';
 
 class StoriesTab extends Component {
   constructor(props) {
@@ -9,9 +10,9 @@ class StoriesTab extends Component {
 
   render() {
     return (
-      <View>
-        <Text> StoriesTab </Text>
-      </View>
+      <ScrollView>
+        <Stories />
+      </ScrollView>
     );
   }
 }
