@@ -24,7 +24,7 @@ class Conversations extends Component {
         */}
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -36,6 +36,39 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -47,6 +80,39 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -58,6 +124,39 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -69,6 +168,39 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -80,6 +212,39 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
+          description="Hello, how are you??"
+          time="12:00 PM"
+          notification="1"
+          hasStory
+          isBlocked
+          isMuted
+        />
+        <ConversationItem
+          imageSrc="http://bayarbotany.com/Avatar.JPG"
+          username="Bro"
           bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
@@ -91,7 +256,7 @@ class Conversations extends Component {
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
           username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
+          bio="https://cdn.pixabay.com/photo/2017/03/25/18/06/color-2174065_960_720.png"
           description="Hello, how are you??"
           time="12:00 PM"
           notification="1"
@@ -101,8 +266,8 @@ class Conversations extends Component {
         />
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
+          username="sis"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/watercolour-1336856_960_720.jpg"
           description="Hello, how are you??"
           time="12:00 PM"
           notification="1"
@@ -112,30 +277,8 @@ class Conversations extends Component {
         />
         <ConversationItem
           imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
-          description="Hello, how are you??"
-          time="12:00 PM"
-          notification="1"
-          hasStory
-          isBlocked
-          isMuted
-        />
-        <ConversationItem
-          imageSrc="http://bayarbotany.com/Avatar.JPG"
-          username="Bayar Botany"
-          bio="https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045_960_720.png"
+          username="someone"
+          bio="https://cdn.pixabay.com/photo/2016/04/18/16/22/gradient-1336854_960_720.jpg"
           description="Hello, how are you??"
           time="12:00 PM"
           notification="1"
