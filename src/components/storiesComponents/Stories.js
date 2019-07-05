@@ -18,7 +18,7 @@ class Stories extends Component {
     return (
       <ScrollView contentContainerStyle={{ paddingTop: 20 }}>
         <StoryItem
-          imageSrc="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          imageSrc="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           username="Tap to add Story"
           time=""
           isNew
@@ -39,21 +39,21 @@ class Stories extends Component {
         <StoryItem
           imageSrc="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           username="Jack"
-          time=""
+          time="3 Hours left"
           isNew
         />
 
         <StoryItem
-          imageSrc="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          imageSrc="https://images.pexels.com/photos/1895160/pexels-photo-1895160.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           username="Jane"
-          time="12:00"
+          time="22 Hours left"
           isNew
         />
 
         <StoryItem
-          imageSrc="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          imageSrc="https://images.pexels.com/photos/555790/pexels-photo-555790.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
           username="Sarah"
-          time=""
+          time="1 Hours left"
           isNew
         />
       </ScrollView>

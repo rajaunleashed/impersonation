@@ -31,6 +31,7 @@ class Conversations extends Component {
           notification="3"
           isBlocked
           isMuted
+          hasStory
         />
         <ConversationItem
           imageSrc="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -38,7 +39,6 @@ class Conversations extends Component {
           bio="my name is someone, i work"
           description="Hello, how are you??"
           time="5:00 PM"
-          notification="3"
           isBlocked
           isMuted
         />
@@ -48,7 +48,7 @@ class Conversations extends Component {
           bio="my name is someone, i work"
           description="Hello, how are you??"
           time="5:00 PM"
-          notification="3"
+          hasStory
           isBlocked
           isMuted
         />
@@ -59,7 +59,7 @@ class Conversations extends Component {
           description="Hello, how are you??"
           time="5:00 PM"
           notification="3"
-          isBlocked
+          hasStory
           isMuted
         />
         <ConversationItem
@@ -81,6 +81,7 @@ class Conversations extends Component {
           notification="3"
           isBlocked
           isMuted
+          hasStory
         />
       </ScrollView>
     );
