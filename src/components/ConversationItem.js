@@ -7,14 +7,14 @@ import { theme } from '../theme';
 const styles = StyleSheet.create({
   /* The Whole Components Style */
   containerStyle: {
-    backgroundColor: theme.colors.tabItemBackground,
-    paddingBottom: 25,
-    paddingRight: 20,
-    paddingLeft: 10
+    backgroundColor: theme.colors.tabItemBackground
   },
   /* The components Style */
   buttonStyle: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingBottom: 25,
+    paddingRight: 20,
+    paddingLeft: 10
   },
   /* Profile Image Container */
   imageContainer: {
@@ -31,20 +31,19 @@ const styles = StyleSheet.create({
   },
   /* The username Text Style */
   usernameTextStyle: {
-    fontSize: 16,
+    fontSize: theme.fontSize.title,
     color: theme.colors.title,
-    fontWeight: '500',
     width: 210
   },
   /* The messages Style */
   descriptionTextStyle: {
-    fontSize: 13,
+    fontSize: theme.fontSize.description,
     width: 240,
     color: theme.colors.description
   },
   /* The time that the message has been sent ---  Style */
   timeTextStyles: {
-    fontSize: 11,
+    fontSize: theme.fontSize.subtitle,
     color: theme.colors.subtitle,
     fontWeight: '300'
   },
@@ -142,7 +141,7 @@ class ConversationItem extends Component {
             }}
           >
             {/* Image */}
-            <Image style={[imageStyle]} source={{ uri: this.props.imageSrc }} />
+            <Image style={imageStyle} source={{ uri: this.props.imageSrc }} />
           </TouchableOpacity>
           {/* Username, message, Time, and notification number Container */}
           <View

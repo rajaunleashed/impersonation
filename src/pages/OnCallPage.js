@@ -16,11 +16,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   usernameTextStyle: {
-    fontSize: 18,
+    fontSize: theme.fontSize.title,
     color: theme.colors.primary
   },
   timeTextStyle: {
-    color: theme.colors.searchBackground
+    color: theme.colors.searchBackground,
+    fontSize: theme.fontSize.description
   },
   optionsContainerStyle: {
     flexDirection: 'row',

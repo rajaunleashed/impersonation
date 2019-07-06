@@ -47,7 +47,7 @@ class Calls extends Component {
      1 = you called and he answered
      2 = they called but you didnt answer
      3 = they called and you answered */
-          callStatus={1}
+          callStatus={3}
           time="12:00 PM Today"
         />
       </ScrollView>

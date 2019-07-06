@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, TouchableOpacity, StatusBar, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import Conversations from '../components/Conversations';
 import SearchInput from '../components/common/SearchInput';
 import { theme } from '../theme';
@@ -49,7 +49,7 @@ class ConversationsTab extends Component {
         </Conversations>
         {/* FLOATING ACTION BUTTON */}
         <TouchableOpacity style={styles.fabStyle}>
-          <Icon name="plus" size={25} color={theme.colors.secondary} />
+          <Icon name="chat" size={25} color={theme.colors.secondary} />
         </TouchableOpacity>
       </View>
     );

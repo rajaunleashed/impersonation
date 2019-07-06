@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   },
   usernameStyle: {
     color: theme.colors.title,
-    fontWeight: 'bold',
     fontSize: 18
   },
   iconStyle: {
