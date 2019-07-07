@@ -38,9 +38,9 @@ const styles = StyleSheet.create({
     fontSize: theme.fontSize.description
   },
   borderTimeContainer: {
-    borderBottomColor: theme.colors.primary,
-    borderBottomWidth: 3,
-    width: '80%'
+    backgroundColor: theme.colors.primary,
+    height: 3,
+    width: '0%'
   },
   storyImageContainer: {
     backgroundColor: 'black'
@@ -49,21 +49,23 @@ const styles = StyleSheet.create({
     height: '100%',
     maxWidth: '100%'
   },
-  buttonsContainer: {
+  previousTouchArea: {
+    backgroundColor: '#0000',
     position: 'absolute',
-    width: '100%',
-    zIndex: 100,
-    flexDirection: 'row',
-    marginTop: 80,
-    height: '100%'
-  },
-  closeButton: {
+    top: 0,
+    left: 0,
     height: '100%',
-    flex: 0.65
+    width: '30%',
+    zIndex: 1
   },
-  previewsButton: {
+  nextTouchArea: {
+    backgroundColor: '#0000',
+    position: 'absolute',
+    top: 0,
+    right: 0,
     height: '100%',
-    flex: 0.35
+    width: '30%',
+    zIndex: 1
   }
 });
 
@@ -75,29 +77,70 @@ class StoryView extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      stories: props.navigation.getParam('stories', []),
+      currentStory: 0,
+      width: '0%'
+    };
+  }
+
+  componentDidMount() {
+    this.setStoryWidth();
+  }
+
+  setStoryWidth() {
+    const { stories, currentStory } = this.state;
+    const length = stories.length;
+    const current = currentStory + 1;
+    const width = (current / length) * 100;
+    this.setState({
+      width: `${width}%`
+    }); 
+  }
+
+  next() {
+    const { stories, currentStory } = this.state;
+    if (currentStory < stories.length - 1) {
+      this.setState({
+        currentStory: currentStory + 1
+      },
+      () => {
+        this.setStoryWidth();
+      });
+    } else {
+      this.props.navigation.goBack();
+    }
+  }
+  previous() {
+    const { currentStory } = this.state;
+    if (currentStory > 0) {
+      this.setState({
+        currentStory: currentStory - 1
+      },
+      () => {
+        this.setStoryWidth();
+      });
+    }
   }
 
   render() {
     /* Calling the props */
-    const username = this.props.navigation.getParam('username', 'no name available');
-    const time = this.props.navigation.getParam('time', 'not available');
+    const username = this.props.navigation.getParam(
+      'username',
+      'no name available'
+    );
     const imageSrc = this.props.navigation.getParam('imageSrc', null);
-    const storyImage = this.props.navigation.getParam('storyImage', null);
     return (
       <View style={styles.mainContainer}>
-        {/* The previews and next button */}
-        <View style={styles.buttonsContainer}>
-          <TouchableOpacity style={styles.previewsButton}>
-            <Text style={{ color: 'transparent' }}>0</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={() => this.props.navigation.goBack()}
-            style={styles.closeButton}
-          >
-            <Text style={{ color: 'transparent' }}>1</Text>
-          </TouchableOpacity>
-        </View>
+        {/* The previous and next button */}
+        <TouchableOpacity
+          onPress={() => this.previous()}
+          style={styles.previousTouchArea}
+        />
+        <TouchableOpacity
+          onPress={() => this.next()}
+          style={styles.nextTouchArea}
+        />
 
         {/* The profile Container */}
         <View style={styles.innerContainer}>
@@ -105,14 +148,17 @@ class StoryView extends Component {
             <Image style={styles.profilePicStyle} source={{ uri: imageSrc }} />
             <View style={styles.titleAndSubtitleContainer}>
               <Text style={styles.titleTextStyle}> {username} </Text>
-              <Text style={styles.subtitleTextStyle}> {time} </Text>
+              <Text style={styles.subtitleTextStyle}> {this.state.stories[this.state.currentStory].time} </Text>
             </View>
           </View>
-          <View style={styles.borderTimeContainer} />
+          <View style={[styles.borderTimeContainer, { width: this.state.width }]} />
         </View>
         {/* The big story */}
         <View style={styles.storyImageContainer}>
-          <Image style={styles.storyImageStyle} source={{ uri: storyImage }} />
+          <Image
+            style={styles.storyImageStyle}
+            source={{ uri: this.state.stories[this.state.currentStory].url }}
+          />
         </View>
       </View>
     );

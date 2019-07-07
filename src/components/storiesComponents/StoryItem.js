@@ -63,7 +63,8 @@ class StoryItem extends Component {
               imageSrc: this.props.imageSrc,
               storyImage: this.props.imageSrc,
               username: this.props.username,
-              time: this.props.time
+              time: this.props.time,
+              stories: this.props.stories
             })
           }
           style={styles.buttonStyle}
