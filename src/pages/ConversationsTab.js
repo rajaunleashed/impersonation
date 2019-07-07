@@ -48,8 +48,11 @@ class ConversationsTab extends Component {
           <SearchInput />
         </Conversations>
         {/* FLOATING ACTION BUTTON */}
-        <TouchableOpacity style={styles.fabStyle}>
-          <Icon name="chat" size={25} color={theme.colors.secondary} />
+        <TouchableOpacity
+          onPress={() => this.props.navigation.navigate('SearchChatPage')}
+          style={styles.fabStyle}
+        >
+          <Icon name="chat" size={30} color={theme.colors.secondary} />
         </TouchableOpacity>
       </View>
     );

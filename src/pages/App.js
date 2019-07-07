@@ -15,6 +15,8 @@ import SettingsPage from './SettingsPage';
 import OnCallPage from './OnCallPage';
 import { theme } from '../theme';
 import ConversationsTab from './ConversationsTab';
+import SearchChatPage from './SearchChatPage';
+import StoryView from './StoryView';
 // NAVIGATOR FUNCTION
 const ChatPageNavigator = createStackNavigator(
   {
@@ -54,7 +56,9 @@ const ChatPageNavigator = createStackNavigator(
     ProfilePage,
     FriendsProfilePage,
     SettingsPage,
-    OnCallPage
+    OnCallPage,
+    SearchChatPage,
+    StoryView
   },
   {
     //THE DEFAULT PAGE WHEN APP STARTS

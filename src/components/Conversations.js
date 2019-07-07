@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { ScrollView } from "react-native";
-import ConversationItem from "./ConversationItem";
+import React, { Component } from 'react';
+import { ScrollView } from 'react-native';
+import ConversationItem from './ConversationItem';
 
 class Conversations extends Component {
   render() {

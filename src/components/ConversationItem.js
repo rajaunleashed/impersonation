@@ -22,7 +22,10 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     height: 50,
     width: 50,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   /* The profile Picture Style */
   imageStyle: {

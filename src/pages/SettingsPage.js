@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { View, StyleSheet, ScrollView } from 'react-native';
 import ProfileHeader from '../components/profileComponents/ProfileHeader';
-import SettingsCard from '../components/profileComponents/SettingsCard';
-import { ScrollView } from 'react-native-gesture-handler';
 import { theme } from '../theme';
+import SettingsSwitchItem from '../components/settingsComponents/SettingsSwitchItem';
+import SettingsPopupItem from '../components/settingsComponents/SettingsPopupItem';
 /* STYLES: you can change Colors, Sizes, Shapes, ETC */
 const styles = StyleSheet.create({
   mainContainer: {
@@ -44,13 +43,14 @@ class SettingsPage extends Component {
     return (
       <View style={mainContainer}>
         <ProfileHeader title={title} onPress={() => this.props.navigation.goBack()} />
-        <ScrollView>
-          <SettingsCard onPress={() => null} title="do Something" icon="bell" />
-          <SettingsCard onPress={() => null} title="do Something" icon="phone" />
-          <SettingsCard onPress={() => null} title="do Something" icon="circle" />
-          <SettingsCard onPress={() => null} title="do Something" icon="ban" />
-          <SettingsCard onPress={() => null} title="do Something" icon="volume-up" />
-          <SettingsCard onPress={() => null} title="do Something" icon="bell" />
+        <ScrollView style={{ flex: 1, paddingTop: 10 }}>
+          <SettingsSwitchItem
+            title="Use custom Names"
+            subtitle="Use nicknames instead of real name"
+          />
+          <SettingsSwitchItem title="Media visibility" subtitle="download media automatically" />
+          <SettingsPopupItem title="Font size" subtitle="Large" />
+          <SettingsPopupItem title="Language" subtitle="English" />
         </ScrollView>
       </View>
     );

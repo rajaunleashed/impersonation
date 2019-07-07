@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import FIcon from 'react-native-vector-icons/FontAwesome5';
+import MIcon from 'react-native-vector-icons/MaterialIcons';
 import { withNavigation } from 'react-navigation';
 import { theme } from '../../theme';
 
@@ -18,7 +19,10 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     height: 50,
     width: 50,
-    overflow: 'hidden'
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   imageStyle: {
     height: 50,
@@ -111,17 +115,30 @@ class CallItem extends Component {
             <Text style={usernameStyle}>{this.props.username}</Text>
             {this.showCallStatus()}
           </View>
-          <TouchableOpacity
-            onPress={() =>
-              this.props.navigation.navigate('OnCallPage', {
-                username: this.props.username,
-                imageSrc: this.props.imageSrc
-              })
-            }
-            style={{ padding: 10 }}
-          >
-            <FIcon name="phone" size={20} color={theme.colors.primary} />
-          </TouchableOpacity>
+          <View style={{ flexDirection: 'row' }}>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate('MessagePage', {
+                  username: this.props.username,
+                  imageSrc: this.props.imageSrc
+                })
+              }
+              style={{ padding: 10 }}
+            >
+              <MIcon name="chat" size={25} color={theme.colors.primary} />
+            </TouchableOpacity>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate('OnCallPage', {
+                  username: this.props.username,
+                  imageSrc: this.props.imageSrc
+                })
+              }
+              style={{ padding: 10 }}
+            >
+              <FIcon name="phone" size={20} color={theme.colors.primary} />
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     );

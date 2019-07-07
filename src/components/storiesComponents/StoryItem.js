@@ -23,7 +23,10 @@ const styles = StyleSheet.create({
     width: 50,
     overflow: 'hidden',
     borderColor: theme.colors.primary,
-    borderWidth: 2
+    borderWidth: 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   /* The profile Picture Style */
   imageStyle: {
@@ -54,7 +57,17 @@ class StoryItem extends Component {
       /* The whole Container */
       <View style={styles.containerStyle}>
         {/* The Button  */}
-        <TouchableOpacity style={styles.buttonStyle}>
+        <TouchableOpacity
+          onPress={() =>
+            this.props.navigation.navigate('StoryView', {
+              imageSrc: this.props.imageSrc,
+              storyImage: this.props.imageSrc,
+              username: this.props.username,
+              time: this.props.time
+            })
+          }
+          style={styles.buttonStyle}
+        >
           {/* The Profile Pic View */}
           <View style={styles.imageContainer}>
             <Image style={[styles.imageStyle]} source={{ uri: this.props.imageSrc }} />
