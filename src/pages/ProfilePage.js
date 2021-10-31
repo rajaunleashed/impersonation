@@ -3,11 +3,13 @@ import { View, StyleSheet, ScrollView } from 'react-native';
 import ProfileHeader from '../components/profileComponents/ProfileHeader';
 import ProfileInfo from '../components/profileComponents/ProfileInfo';
 import SettingsCard from '../components/profileComponents/SettingsCard';
+import { theme } from '../theme';
 
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    height: '100%'
+    height: '100%',
+    backgroundColor: theme.colors.tabPageBackground
   }
 });
 
@@ -65,6 +67,16 @@ class ProfilePage extends Component {
             icon="bell"
           />
           <SettingsCard onPress={() => null} title="Help" icon="info-circle" />
+
+          <SettingsCard
+            onPress={() =>
+              this.props.navigation.navigate('LoginPage', {
+                title: 'LoginPage'
+              })
+            }
+            title="Login"
+            icon="align-left"
+          />
         </ScrollView>
       </View>
     );

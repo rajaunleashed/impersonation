@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
+import { theme } from '../../theme';
 
 /* Styles for the components */
 const styles = StyleSheet.create({
@@ -8,7 +9,7 @@ const styles = StyleSheet.create({
     marginVertical: 5
   },
   chatContainer: {
-    backgroundColor: '#0084ff',
+    backgroundColor: theme.colors.primary,
     maxWidth: '80%',
     alignSelf: 'flex-end',
     flexDirection: 'row',

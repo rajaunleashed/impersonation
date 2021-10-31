@@ -121,7 +121,7 @@ class OnCallPage extends Component {
     const username = navigation.getParam('username', 'no name available');
     const imageSrc = navigation.getParam('imageSrc', null);
     return (
-      <View>
+      <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
         <View style={ProfileContainer}>
           <View style={usernameAndTime}>
             <Text style={usernameTextStyle}>{username}</Text>

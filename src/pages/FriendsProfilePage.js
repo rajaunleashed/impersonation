@@ -8,7 +8,8 @@ import { theme } from '../theme';
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    height: '100%'
+    height: '100%',
+    backgroundColor: theme.colors.tabPageBackground
   }
 });
 

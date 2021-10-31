@@ -7,7 +7,8 @@ import { theme } from '../../theme';
 /* STYLESHEETS */
 const styles = StyleSheet.create({
   container: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: theme.colors.tabItemBackground
   },
   innerContainer: {
     marginHorizontal: 10,

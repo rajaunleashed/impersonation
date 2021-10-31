@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     overflow: 'hidden',
-    borderColor: theme.colors.primary,
+    borderColor: theme.colors.storyBorder,
     borderWidth: 2,
     alignItems: 'center',
     justifyContent: 'center',

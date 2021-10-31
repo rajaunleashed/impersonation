@@ -7,7 +7,7 @@ import { theme } from '../../theme';
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: theme.colors.tabPageBackground,
+    backgroundColor: theme.colors.tabBackground,
     paddingVertical: 5
   },
   backButtonStyle: {

@@ -95,18 +95,20 @@ class StoryView extends Component {
     const width = (current / length) * 100;
     this.setState({
       width: `${width}%`
-    }); 
+    });
   }
 
   next() {
     const { stories, currentStory } = this.state;
     if (currentStory < stories.length - 1) {
-      this.setState({
-        currentStory: currentStory + 1
-      },
-      () => {
-        this.setStoryWidth();
-      });
+      this.setState(
+        {
+          currentStory: currentStory + 1
+        },
+        () => {
+          this.setStoryWidth();
+        }
+      );
     } else {
       this.props.navigation.goBack();
     }
@@ -114,33 +116,26 @@ class StoryView extends Component {
   previous() {
     const { currentStory } = this.state;
     if (currentStory > 0) {
-      this.setState({
-        currentStory: currentStory - 1
-      },
-      () => {
-        this.setStoryWidth();
-      });
+      this.setState(
+        {
+          currentStory: currentStory - 1
+        },
+        () => {
+          this.setStoryWidth();
+        }
+      );
     }
   }
 
   render() {
     /* Calling the props */
-    const username = this.props.navigation.getParam(
-      'username',
-      'no name available'
-    );
+    const username = this.props.navigation.getParam('username', 'no name available');
     const imageSrc = this.props.navigation.getParam('imageSrc', null);
     return (
       <View style={styles.mainContainer}>
         {/* The previous and next button */}
-        <TouchableOpacity
-          onPress={() => this.previous()}
-          style={styles.previousTouchArea}
-        />
-        <TouchableOpacity
-          onPress={() => this.next()}
-          style={styles.nextTouchArea}
-        />
+        <TouchableOpacity onPress={() => this.previous()} style={styles.previousTouchArea} />
+        <TouchableOpacity onPress={() => this.next()} style={styles.nextTouchArea} />
 
         {/* The profile Container */}
         <View style={styles.innerContainer}>
@@ -148,7 +143,9 @@ class StoryView extends Component {
             <Image style={styles.profilePicStyle} source={{ uri: imageSrc }} />
             <View style={styles.titleAndSubtitleContainer}>
               <Text style={styles.titleTextStyle}> {username} </Text>
-              <Text style={styles.subtitleTextStyle}> {this.state.stories[this.state.currentStory].time} </Text>
+              <Text style={styles.subtitleTextStyle}>
+                {this.state.stories[this.state.currentStory].time}
+              </Text>
             </View>
           </View>
           <View style={[styles.borderTimeContainer, { width: this.state.width }]} />

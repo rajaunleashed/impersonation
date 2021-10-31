@@ -105,7 +105,7 @@ class ConversationItem extends Component {
   showStoryCircle() {
     if (this.props.hasStory) {
       return {
-        borderColor: theme.colors.primary,
+        borderColor: theme.colors.storyBorder,
         borderWidth: 2
       };
     }

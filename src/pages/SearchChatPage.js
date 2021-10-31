@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import ProfileHeader from '../components/profileComponents/ProfileHeader';
 import SearchInput from '../components/common/SearchInput';
 import SearchChatList from '../components/searchChatComponents/SearchChatList';
+import { theme } from '../theme';
 
 class SearchChatPage extends Component {
   // THIS OPTION IS TO SHOW/HIDE DEFAULT NAVIGATION HEADER
@@ -17,7 +18,7 @@ class SearchChatPage extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
         <ProfileHeader title="Select contact" onPress={() => this.props.navigation.goBack()} />
         <SearchInput />
         <SearchChatList />
