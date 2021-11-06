@@ -1,4 +1,4 @@
-package com.bnwchatapp;
+package com.impersonator;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

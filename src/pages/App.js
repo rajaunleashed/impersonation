@@ -70,7 +70,7 @@ const ChatPageNavigator = createStackNavigator(
   },
   {
     //THE DEFAULT PAGE WHEN APP STARTS
-    initialRouteName: 'Home'
+    initialRouteName: 'LoginPage'
   }
 );
 

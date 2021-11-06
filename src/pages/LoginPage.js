@@ -4,7 +4,7 @@ import AuthHeader from '../components/loginPageComponents/AuthHeader';
 import TextInputComponent from '../components/loginPageComponents/TextInputComponent';
 import BigButtonComponent from '../components/loginPageComponents/BigButtonComponent';
 import { theme } from '../theme';
-
+import { CountryCodes } from '../utils/helper';
 
 class LoginPage extends Component {
   // THIS OPTION IS TO SHOW/HIDE DEFAULT NAVIGATION HEADER
@@ -14,7 +14,12 @@ class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      countryCode: '92'
     };
+  }
+
+  setSelectedCallingCode = code => {
+    this.setState({ countryCode: code});
   }
 
   render() {

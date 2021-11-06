@@ -1,4 +1,4 @@
-package com.bnwchatapp;
+package com.impersonator;
 
 import android.app.Application;
 
