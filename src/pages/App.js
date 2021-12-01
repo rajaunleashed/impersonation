@@ -28,13 +28,17 @@ const ChatPageNavigator = createStackNavigator(
       {
         Calls: CallsTab,
         Chats: ConversationsTab,
-        Stories: StoriesTab
+        Stories: StoriesTab,
+        Camera: StoriesTab,
+        Audio: StoriesTab
       },
       {
         initialRouteName: 'Chats',
         tabBarOptions: {
           activeTintColor: theme.colors.activeTabTitle,
           inactiveTintColor: theme.colors.inactiveTabTitle,
+          showIcon: true,
+          showLabel: false,
           tabStyle: {
             backgroundColor: 'transparent'
           },
@@ -52,7 +56,7 @@ const ChatPageNavigator = createStackNavigator(
           /* HEADER Component
         The onPress function is to
         navigate to ProfilePage when you click on the profile picture */
-          header: <Header title="BlueChat" />
+          header: <Header title="Impersonation" />
         }
       }
     ),
@@ -66,7 +70,7 @@ const ChatPageNavigator = createStackNavigator(
     LoginPage,
     VerificationPage,
     SignUpPage
-    
+
   },
   {
     //THE DEFAULT PAGE WHEN APP STARTS

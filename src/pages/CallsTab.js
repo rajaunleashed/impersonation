@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, ScrollView, TouchableOpacity, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Calls from '../components/callTabComponents/Calls';
@@ -23,25 +23,47 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 }
   }
 });
-class CallsTab extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+// class CallsTab1 extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {};
+//   }
 
-  render() {
-    return (
-      <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
-        <ScrollView>
-          <Calls />
-        </ScrollView>
-        {/* FLOATING ACTION BUTTON */}
-        <TouchableOpacity style={styles.fabStyle}>
-          <Icon name="phone" size={25} color={theme.colors.secondary} />
-        </TouchableOpacity>
-      </View>
-    );
-  }
+//   render() {
+//     return (
+//       <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
+//         <ScrollView>
+//           <Calls />
+//         </ScrollView>
+//         {/* FLOATING ACTION BUTTON */}
+//         <TouchableOpacity style={styles.fabStyle}>
+//           <Icon name="phone" size={25} color={theme.colors.secondary} />
+//         </TouchableOpacity>
+//       </View>
+//     );
+//   }
+// }
+const CallsTab = (props) => {
+  return (
+    <View style={{ backgroundColor: theme.colors.tabPageBackground, flex: 1 }}>
+      <ScrollView>
+        <Calls />
+      </ScrollView>
+      {/* FLOATING ACTION BUTTON */}
+      <TouchableOpacity style={styles.fabStyle}>
+        <Icon name="phone" size={25} color={theme.colors.secondary} />
+      </TouchableOpacity>
+    </View>
+  );
+};
+CallsTab.navigationOptions = {
+  tabBarIcon: ({ tintColor, focused }) => (
+    <Icon
+      name={focused ? 'camera' : 'camera'}
+      color={tintColor}
+      size={20}
+    />
+  )
 }
 
 export default CallsTab;

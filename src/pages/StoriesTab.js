@@ -45,5 +45,15 @@ class StoriesTab extends Component {
     );
   }
 }
+StoriesTab.navigationOptions = {
+  tabBarIcon: ({ tintColor, focused }) => (
+    <Icon
+      name={focused ? 'refresh' : 'refresh'}
+      color={tintColor}
+      size={20}
+    />
+  )
+}
+
 
 export default StoriesTab;

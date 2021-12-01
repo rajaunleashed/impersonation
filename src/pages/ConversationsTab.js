@@ -59,4 +59,14 @@ class ConversationsTab extends Component {
   }
 }
 
+ConversationsTab.navigationOptions = {
+  tabBarIcon: ({ tintColor, focused }) => (
+    <Icon
+      name={focused ? 'refresh' : 'refresh'}
+      color={tintColor}
+      size={20}
+    />
+  )
+}
+
 export default ConversationsTab;
